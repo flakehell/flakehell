@@ -128,6 +128,8 @@ class FlakeHellApplication(Application):
             args=argv,
             values=config,
         )
+        if not hasattr(self.options, 'extended_default_ignore'):
+            setattr(self.options, 'extended_default_ignore', set())
 
         # All this goes from the original `parse_configuration_and_cli`.
         # We can't call `super` anymore because all `Application` methods
