@@ -5,7 +5,10 @@ from typing import Sequence
 
 # external
 try:
-    from pylint.__pkginfo__ import version
+    try:
+        from pylint.__pkginfo__ import version
+    except ImportError:
+        from pylint.__pkginfo__ import __version__ as version
     from pylint.lint import Run
     from pylint.reporters import BaseReporter
 except ImportError:
