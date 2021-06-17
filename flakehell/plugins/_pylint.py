@@ -5,7 +5,17 @@ from typing import Sequence
 
 # external
 try:
-    from pylint.__pkginfo__ import version
+    try:
+        # for pylint < 2.8
+        from pylint.__pkginfo__ import version
+    except ImportError:
+        try:
+            # for Python >= 3.8
+            from importlib import metadata
+            version = metadata.version('pylint')
+        except ImportError:
+            # for pylint >= 2.8 (maybe removed in 3.0?)
+            from pylint import __version__ as version
     from pylint.lint import Run
     from pylint.reporters import BaseReporter
 except ImportError:
