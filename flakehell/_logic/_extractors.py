@@ -220,9 +220,8 @@ def extract_flake8_pytest_style() -> Dict[str, str]:
 
 
 def extract_flake8_annotations_complexity() -> Dict[str, str]:
-    from flake8_annotations_complexity.checker import AnnotationsComplexityChecker
-
-    code, message = AnnotationsComplexityChecker._error_message_template.split(' ', maxsplit=1)
+    _error_message_template = "TAE002 too complex annotation ({0} > {1})"
+    code, message = _error_message_template.split(' ', maxsplit=1)
     return {code: message}
 
 
