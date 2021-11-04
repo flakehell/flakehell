@@ -221,9 +221,13 @@ def extract_flake8_pytest_style() -> Dict[str, str]:
 
 
 def extract_flake8_annotations_complexity() -> Dict[str, str]:
-    _error_message_template = "TAE002 too complex annotation ({0} > {1})"
-    code, message = _error_message_template.split(' ', maxsplit=1)
-    return {code: message}
+    _error_message_templates = ['TAE002 too complex annotation ({0} > {1})',
+                                'TAE003 too long annotation ({0} > {1})']
+    codes = dict()
+    for _error_message_template in _error_message_templates:
+        code, message = _error_message_template.split(' ', maxsplit=1)
+        codes[code] = message
+    return codes
 
 
 def extract_flake8_future_import() -> Dict[str, str]:

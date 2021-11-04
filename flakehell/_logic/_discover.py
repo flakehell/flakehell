@@ -16,6 +16,7 @@ ALIASES = {
     'flake8-future-import': ('FI', ),
     'flake8-mock': ('M001', ),
     'flake8-pytest': ('T003', ),
+    'flake8-annotations-complexity': ('TAE002', 'TAE003'),
     'logging-format': ('G', ),
     'pycodestyle': ('W', 'E'),
     'pylint': ('C', 'E', 'F', 'I', 'R', 'W'),
