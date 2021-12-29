@@ -1,0 +1,25 @@
+# Run flakehell linting - https://flakehell.readthedocs.io/
+
+name: python-flakehell
+
+on:
+  push:
+    branches: [ devel ]
+  pull_request:
+    branches: [ devel ]
+
+jobs:
+  PythonFlakehell:
+    name: runner / flakehell
+    runs-on: [self-hosted, jenkins_ci_runner]
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - uses: sailingpalmtree/reviewdog-flakehell-action@latest
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # Change reviewdog reporter if you need [github-pr-check,github-check,github-pr-review].
+          reporter: github-pr-review
+          # Change reporter level if you need.
+          # GitHub Status Check won't become failure with warning.
+          level: warning
