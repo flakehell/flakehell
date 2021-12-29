@@ -2,7 +2,7 @@
 exclude = ["example.py", "setup.py", "README.rst"]
 max_line_length = 120
 show_source = true
-requires = ["flake8<4.0.0""]
+requires = ["flake8<4.0.0"]
 
 [tool.flakehell.plugins]
 pycodestyle = ["+*"]
