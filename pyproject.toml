@@ -90,7 +90,7 @@ classifiers=[
 ]
 
 [tool.flit.metadata.urls]
-Documentation = "https://flakehell.readthedocs.io/"
+Documentation = "https://flakehell.github.io/flakehell/"
 
 [tool.flit.scripts]
 flakehell = "flakehell:entrypoint"
