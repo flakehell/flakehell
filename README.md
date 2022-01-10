@@ -1,30 +1,28 @@
 # ![FlakeHell](./assets/logo.png)
 
-[![PyPI version](https://badge.fury.io/py/flakehell.svg)](https://badge.fury.io/py/flakehell)
 [![Build Status](https://cloud.drone.io/api/badges/life4/flakehell/status.svg)](https://cloud.drone.io/life4/flakehell)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Documentation](https://readthedocs.org/projects/flakehell/badge/?version=latest)](https://flakehell.readthedocs.io/)
 
 It's a [Flake8](https://gitlab.com/pycqa/flake8) wrapper to make it cool.
 
 Fork of [life4/flakehell](https://github.com/life4/flakehell)
 
-+ [Lint md, rst, ipynb, and more](https://flakehell.readthedocs.io/parsers.html).
-+ [Shareable and remote configs](https://flakehell.readthedocs.io/config.html#base).
-+ [Legacy-friendly](https://flakehell.readthedocs.io/commands/baseline.html): ability to get report only about new errors.
++ [Lint md, rst, ipynb, and more](https://flakehell.github.io/flakehell/parsers.html).
++ [Shareable and remote configs](https://flakehell.github.io/flakehell/config.html#base).
++ [Legacy-friendly](https://flakehell.github.io/flakehell/commands/baseline.html): ability to get report only about new errors.
 + Caching for much better performance.
-+ [Use only specified plugins](https://flakehell.readthedocs.io/config.html#plugins), not everything installed.
-+ [Make output beautiful](https://flakehell.readthedocs.io/formatters.html).
++ [Use only specified plugins](https://flakehell.github.io/flakehell/config.html#plugins), not everything installed.
++ [Make output beautiful](https://flakehell.github.io/flakehell/formatters.html).
 + [pyproject.toml](https://www.python.org/dev/peps/pep-0518/) support.
-+ [Check that all required plugins are installed](https://flakehell.readthedocs.io/commands/missed.html).
-+ [Syntax highlighting in messages and code snippets](https://flakehell.readthedocs.io/formatters.html#colored-with-source-code).
++ [Check that all required plugins are installed](https://flakehell.github.io/flakehell/commands/missed.html).
++ [Syntax highlighting in messages and code snippets](https://flakehell.github.io/flakehell/formatters.html#colored-with-source-code).
 + [PyLint](https://github.com/PyCQA/pylint) integration.
-+ [Powerful GitLab support](https://flakehell.readthedocs.io/formatters.html#gitlab).
++ [Powerful GitLab support](https://flakehell.github.io/flakehell/formatters.html#gitlab).
 + Codes management:
     + Manage codes per plugin.
     + Enable and disable plugins and codes by wildcard.
-    + [Show codes for installed plugins](https://flakehell.readthedocs.io/commands/plugins.html).
-    + [Show all messages and codes for a plugin](https://flakehell.readthedocs.io/commands/codes.html).
+    + [Show codes for installed plugins](https://flakehell.github.io/flakehell/commands/plugins.html).
+    + [Show all messages and codes for a plugin](https://flakehell.github.io/flakehell/commands/codes.html).
     + Allow codes intersection for different plugins.
 
 ![output example](./assets/grouped.png)
@@ -98,7 +96,7 @@ flakehell lint
 
 This command accepts all the same arguments as Flake8.
 
-Read [flakehell.readthedocs.io](https://flakehell.readthedocs.io/) for more information.
+Read [flakehell.github.io/flakehell/](https://flakehell.github.io/flakehell/) for more information.
 
 ## Contributing
 
