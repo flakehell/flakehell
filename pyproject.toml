@@ -10,36 +10,6 @@ flake8-commas = ["+*"]
 flake8-quotes = ["+*"]
 pylint = ["+F*", "+E*", "-E0611", "-E1101", "-E0401", "-E1102", "-E1123"]
 
-# -- DEPHELL -- #
-
-[tool.dephell.main]
-from = {format = "flit", path = "pyproject.toml"}
-to = {format = "setuppy", path = "setup.py"}
-envs = ["main", "dev"]
-tag = "v."
-command = "python -m flakehell lint"
-
-[tool.dephell.pytest]
-from = {format = "flit", path = "pyproject.toml"}
-envs = ["main", "dev"]
-tests = ["tests"]
-command = "python -m pytest tests/"
-
-[tool.dephell.docs]
-from = {format = "flit", path = "pyproject.toml"}
-envs = ["docs"]
-command = "sphinx-build -W docs docs/build"
-
-[tool.dephell.isort]
-from = {format = "flit", path = "pyproject.toml"}
-envs = ["main", "dev"]
-command = "isort -rc -y"
-
-[tool.dephell.typing]
-from = {format = "flit", path = "pyproject.toml"}
-envs = ["main"]
-command = "mypy --ignore-missing-imports --allow-redefinition flakehell/"
-
 # -- ISORT -- #
 
 [tool.isort]
@@ -168,7 +138,7 @@ dev = [
     "pandas-vet",
     "pep8-naming",
     "pylint",
-    "typing-extensions", # required by WPS but isn't installed by DepHell
+    "typing-extensions", # required by WPS
     "wemake-python-styleguide",
 
     "pytest",

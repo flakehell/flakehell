@@ -17,7 +17,7 @@ First of all, let's talk why FlakeHell is fast:
 
 And now, why it can be slow:
 
-1. We use the same plugins-discovery mechanic as flake8 does, and it is slow. It requires to scan all installed libraries on every run. As a solution, keep FlakeHell in a separate virtual environment. There are a few tools that can help with it: [dephell](https://dephell.readthedocs.io/cmd-jail-install.html), [pipsi](https://github.com/mitsuhiko/pipsi), [pipx](https://github.com/pipxproject/pipx).
+1. We use the same plugins-discovery mechanic as flake8 does, and it is slow. It requires to scan all installed libraries on every run. As a solution, keep FlakeHell in a separate virtual environment. You can use [pipx](https://github.com/pipxproject/pipx).
 1. FlakeHell lints not only `*.py` files but also `*.md`, `*.rst` and a few more. See [parsers](parsers) section for the details. If you don't need it, tune [ignore](https://flake8.pycqa.org/en/latest/user/options.html#cmdoption-flake8-ignore) to exclude specific files or directories, or [filename](https://flake8.pycqa.org/en/latest/user/options.html#cmdoption-flake8-filename) to exclude extensions.
 
 ## Some plugins are ignored
